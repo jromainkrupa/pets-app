@@ -1,0 +1,11 @@
+<h1>Pets#show</h1>
+<p>Find me in app/views/pets/show.html.erb</p>
+
+<%= @pet.name %>
+<%= @pet.species %>
+<%= @pet.address %>
+<p><%= @pet.found_on.strftime("%m/%d/%Y à %H:%M") %></p>
+
+<%= link_to "home", root_path %>
+<%= link_to "edit", edit_pet_path(@pet) %>
+<%= link_to "delete", pet_path(@pet), method: :delete, data: { confirm: { "are you sure ?"}} %>

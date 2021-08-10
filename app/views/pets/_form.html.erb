@@ -1,0 +1,15 @@
+<%= form_for pet do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, placeholder:"ex: kitty" %>
+  
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  
+  <%= f.label :species %>
+  <%= f.select :species, Pet::SPECIES  %>
+  
+  <%= f.label :found_on %>
+  <%= f.datetime_field :found_on %>
+
+  <%= f.submit "click!" %>
+<% end %>
